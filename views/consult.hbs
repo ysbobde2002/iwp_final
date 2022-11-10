@@ -49,7 +49,7 @@ body {
   background-color: #f1f1f1;
   padding: 5px;
   overflow: hidden;
-  background-color: #333;
+  background-color: #333
   text-align: center;
 }
 
@@ -99,7 +99,7 @@ input[type=submit]:hover {
   border: 2px solid #00ccff;
   border-radius: 5px;
   width:700px;
-  background-color:#66e0ff;
+  background-color:#b3f0ff;
   padding: 20px;
 }
 </style>
@@ -125,62 +125,51 @@ input[type=submit]:hover {
 
 <div class="symform">
   <form>
-    <h2 style="text-align:center">Connect</h2>
-    <label for="loc">Enter the name of the city you reside in:</label>
-    <input type="text" id="loc" name="loc" placeholder="Enter your city location..">
-    <h3>Enter your most prominent/severe symptoms:</h3>
-    <p>[Leave blank if options are more]</p><br>
-    <label for="sym1">Select the area of discomfort</label>
-    <select id="sym1" name="region">
-      <option value="australia">Select..</option>
-      <option value="australia">Head</option>
-      <option value="canada">Dental</option>
-      <option value="usa">Throat</option>
-      <option value="usa">Neck</option>
-      <option value="usa">Chest</option>
-      <option value="usa">Back</option>
-      <option value="usa">Stomach</option>
-      <option value="usa">Hip</option>
-      <option value="usa">Joint</option>
-      <option value="usa">Leg</option>
-      <option value="usa">Other</option>  
-    </select>
-    <input type="text" id="dsym1" name="desc1" placeholder="Describe the symptoms/feelings...">
+    <h2 style="text-align:center">Consult</h2>
+    <p style="text-align:center;">Consult a doctor easily and without the hassle of going to the hospital!</p>
+   <!-- <label for="loc">Enter the name of the city you reside in:</label>
+    <input type="text" id="loc" name="loc" placeholder="Enter your city..">
+    <br><br>
+    <h3>Select the type of doctor you would like to consult:</h3>-->
+ 
+     <table style="border:solid black;">
+  <tr>
+    <td>Patient Name:</td>
+    <td id="name"></td>
+  </tr>
+  <tr>
+    <td>Phone No:</td>
+    <td id="phno"></td>
+  </tr>
+    <tr>
+    <td>Email ID:</td>
+    <td id="email"></td>
+  </tr>
+    <tr>
+    <td>Address:</td>
+    <td id="caddr"></td>
+  </tr>
+</table> 
+<br>
 
-    <label for="sym2">Select the area of discomfort</label>
-    <select id="sym2" name="region">
-      <option value="australia">Select..</option>
-      <option value="australia">Head</option>
-      <option value="canada">Dental</option>
-      <option value="usa">Throat</option>
-      <option value="usa">Neck</option>
-      <option value="usa">Chest</option>
-      <option value="usa">Back</option>
-      <option value="usa">Stomach</option>
-      <option value="usa">Hip</option>
-      <option value="usa">Joint</option>
-      <option value="usa">Leg</option>
-      <option value="usa">Other</option>  
-    </select>
-    <input type="text" id="dsym2" name="desc2" placeholder="Describe the symptoms/feelings...">
-    
-    <label for="sym3">Select the area of discomfort</label>
-    <select id="sym3" name="region">
-      <option value="australia">Select..</option>
-      <option value="australia">Head</option>
-      <option value="canada">Dental</option>
-      <option value="usa">Throat</option>
-      <option value="usa">Neck</option>
-      <option value="usa">Chest</option>
-      <option value="usa">Back</option>
-      <option value="usa">Stomach</option>
-      <option value="usa">Hip</option>
-      <option value="usa">Joint</option>
-      <option value="usa">Leg</option>
-      <option value="usa">Other</option>  
+    <label for="sym">Select the type of doctor you would like to consult:</label>
+    <select id="sym" name="region">
+      <option value="select">Select..</option>
+      <option value="Neuro">Neuro</option>
+      <option value="Dental">Dental</option>
+      <option value="ENT">ENT</option>
+      <option value="Thoracic">Thoracic</option>
+      <option value="Ortho">Orthopedics</option>
+      <option value="Rad">Radiology</option>
+      <option value="Gastro">Gastroenterology</option>
+      <option value="Endo">Endocrinology</option>
+      <option value="gp">General Practiotioner</option>  
     </select>
     <input type="text" id="dsym3" name="desc3" placeholder="Describe the symptoms/feelings...">
-  
+    
+    <label for="symfile">Upload PDF containing relevant reports or documents</label>
+    <input type="file" id="report" name="report">
+
     <input type="submit" value="Submit">
   </form>
 </div>
@@ -188,7 +177,7 @@ input[type=submit]:hover {
 <br><br>
 <div class="footer">
 <a href="Contact.html">Contact Us</a>
-<a href="team.html" style="float:right;">About the team</a>
+<a href="team.html" style="float:right;">Our Team</a>
 <p style="text-align: center;">DocLine</p>
 </div>
 </body>
