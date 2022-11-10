@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>drweb</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  backround-color: lightblue;
+  
+}
+
+/* Style the header */
+.header {
+  background-color: #d9d9d9;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #d9d9d9;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #f2f2f2;;
+  color: white;
+}
+
+.footer {
+
+  margin-bottom:0;
+  background-color: #f1f1f1;
+  padding: 5px;
+  overflow: hidden;
+  background-color: #333
+  text-align: center;
+}
+
+.footer a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.footer a:hover {
+  background-color: #aaa;
+  color: white;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  //border: 2px solid #00ccff;
+  border-radius: 15px;
+  width: 33.33%;
+  padding: 15px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  padding:5px;
+  display: table;
+  clear: both;
+}
+
+.button:link, .button:visited {
+  background-color: white;
+  color: black;
+  border: 2px solid #00ccff;
+  border-radius: 200px;
+  padding: 10px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.button:hover, .button:active 
+{
+  background-color: #00ccff;
+  color: white;
+}
+.submit:link, .submit:visited {
+  background-color: white;
+  color: black;
+  border: 2px solid #00ccff;
+  border-radius: 200px;
+  padding: 10px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.submit:hover, .submit:active 
+{
+  background-color: #00ccff;
+  color: white;
+}
+
+input[type=text], input[type=password], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.login {
+  margin: auto;
+  width: 600px;
+  height:490px;
+  padding:20px;
+  background-color:#b3f0ff;
+  border: solid 3px #00ccff;
+  border-radius:50px;
+}
+.loginform{
+}
+
+</style>
+</head>
+
+<body style="background-color:lightblue">
+
+<div class="topnav">
+  <a href="/">Home</a>
+ 
+  <a href="/faq">FAQs</a>
+  <a href="/login" style="float:right">Log In</a>
+</div>
+
+<div class="header" style="padding:5px">
+<img src="http://localhost:5000/images/logo2.png" style="float:left;margin-top:20px;margin-left:20px;height:100px; width:100px; border: 1px solid blue;border-radius:75px; padding:0px;"></img>
+  <h1 style="font-size:40px;margin-right:113px">DocLine</h1>
+  <p style="margin-right:110px">Your online medicenter for consultation, diagnosis and pharmacies.</p>
+
+</div>
+<br><BR><BR><BR>
+
+<div class = "login">
+<h1 style="text-align:center">Log In</h1>
+<form class="loginform" action="/auth/login" method="POST">
+    <select id="whois" name = "whois">
+	<option value="select">Select..</option>
+	<option value="dr">Doctor</option>
+	<option value="pat">Patient</option>
+	<option value="phar">Pharmacy</option>
+</select><br>
+    <label for="username">Email:</label> 
+    <input type="text" id="email" name="email" placeholder="Enter Email:">
+    <label for="pword">Password:</label> 
+    <input type="password" id="pword" name="pword" placeholder="Enter Password:">
+    <br>
+<button class="submit"  style="margin-left:41.25%;">Login</a>
+<br>
+</form>
+
+<p style="text-align:center">or</p>
+<a class="button" href="/index" style="margin-left:40%;">Sign Up</a>
+
+</div>
+
+<br><br>
+<br><BR>
+
+<br><br>
+<div class="footer">
+
+<a href="/contact">Contact Us</a>
+<a href="/team" style="float:right;">Our Team</a>
+<p style="text-align: center;">DocLine</p>
+
+</div>
+
+</body>
+</html>
